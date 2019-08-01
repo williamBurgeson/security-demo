@@ -5,8 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using security_demo_angular.Infrastructure.Services;
 
-namespace security_demo
+namespace security_demo_angular
 {
     public class Startup
     {
@@ -27,6 +28,8 @@ namespace security_demo
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddTransient<IAuthenticationService, AuthenticationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

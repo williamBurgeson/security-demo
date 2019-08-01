@@ -1,11 +1,11 @@
 {
-  "name": "security_demo",
+  "name": "security_demo_angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ssr": "ng run security_demo:server:dev",
+    "build:ssr": "ng run security_demo_angular:server:dev",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

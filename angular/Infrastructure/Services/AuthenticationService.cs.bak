@@ -1,0 +1,58 @@
+﻿using Microsoft.AspNetCore.Identity;
+using security_demo_angular.Infrastructure.Entities;
+using security_demo_angular.Infrastructure.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace security_demo_angular.Infrastructure.Services
+{
+    public interface IAuthenticationService
+    {
+        Task<SignInResult> LogIntoSystem(LoginModel loginModel);
+        Task<IdentityResult> RegisterNewUser(RegisterModel registerModel);
+        Task SignOut();
+        Task<ConfirmationModel> ForgotPassword(ForgotPasswordModel forgotPasswordViewModel);
+        Task<IdentityResult> ResetPassword(ResetPasswordModel forgotPasswordViewModel);
+    }
+
+    public class AuthenticationService : IAuthenticationService
+    {
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+
+        public AuthenticationService(
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+        }
+
+        public async Task<SignInResult> LogIntoSystem(LoginModel loginModel)
+        {
+            var applicationUser = await _userManager.FindByEmailAsync(loginModel.Login) ?? await _userManager.FindByNameAsync(loginModel.Login);
+            if (applicationUser != null)
+            {
+                var result = await _signInManager.PasswordSignInAsync(applicationUser, loginModel.Password, isPersistent: false, lockoutOnFailure: false);
+                if (result.Succeeded)
+                {
+                    await UpdateUser(applicationUser);
+                }
+
+                return result;
+            }
+            return SignInResult.Failed;
+        }
+
+        private async Task<IdentityResult> UpdateUser(ApplicationUser applicationUser)
+        {
+            applicationUser.LoginsCount++;
+            applicationUser.LastLogin = DateTime.Now;
+
+            var result = await _userManager.UpdateAsync(applicationUser);
+            return result;
+        }
+    }
+}

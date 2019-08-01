@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "security_demo": {
+    "security_demo_angular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -52,18 +52,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "security_demo:build"
+            "browserTarget": "security_demo_angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "security_demo:build:production"
+              "browserTarget": "security_demo_angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "security_demo:build"
+            "browserTarget": "security_demo_angular:build"
           }
         },
         "test": {
@@ -122,7 +122,7 @@
         }
       }
     },
-    "security_demo-e2e": {
+    "security_demo_angular-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -130,7 +130,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "security_demo:serve"
+            "devServerTarget": "security_demo_angular:serve"
           }
         },
         "lint": {
@@ -145,5 +145,5 @@
       }
     }
   },
-  "defaultProject": "security_demo"
+  "defaultProject": "security_demo_angular"
 }
