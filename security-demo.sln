@@ -1,9 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 16
+# Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "security-demo-angular", "angular\security-demo-angular.csproj", "{2FBDDEE7-3B36-4DFE-A1B2-36D98EACC7D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "security-demo-mvc", "mvc\security-demo-mvc.csproj", "{A7BA632D-7D28-49A2-9832-31F04122CA64}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "aspnet-core-registration-login-api\WebApi.csproj", "{0A693913-CA3E-4102-9819-D262E807C588}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angular-6-registration-login-example", "angular-6-registration-login-example\", "{DE3FBB78-E43D-40A6-AD51-E4F249501057}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_63017"
+		Debug.AspNetCompiler.PhysicalPath = "angular-6-registration-login-example\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63017\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_63017"
+		Release.AspNetCompiler.PhysicalPath = "angular-6-registration-login-example\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63017\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "63017"
+		SlnRelativePath = "angular-6-registration-login-example\"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +40,18 @@ Global
 		{2FBDDEE7-3B36-4DFE-A1B2-36D98EACC7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FBDDEE7-3B36-4DFE-A1B2-36D98EACC7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FBDDEE7-3B36-4DFE-A1B2-36D98EACC7D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7BA632D-7D28-49A2-9832-31F04122CA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7BA632D-7D28-49A2-9832-31F04122CA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7BA632D-7D28-49A2-9832-31F04122CA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7BA632D-7D28-49A2-9832-31F04122CA64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A693913-CA3E-4102-9819-D262E807C588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A693913-CA3E-4102-9819-D262E807C588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A693913-CA3E-4102-9819-D262E807C588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A693913-CA3E-4102-9819-D262E807C588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE3FBB78-E43D-40A6-AD51-E4F249501057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE3FBB78-E43D-40A6-AD51-E4F249501057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE3FBB78-E43D-40A6-AD51-E4F249501057}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE3FBB78-E43D-40A6-AD51-E4F249501057}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
